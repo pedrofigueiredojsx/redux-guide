@@ -19,7 +19,7 @@ const Cart = ({ isVisible, setIsVisible }) => {
       <Styles.CartContent>
         <Styles.CartTitle>Seu Carrinho</Styles.CartTitle>
         {products.map((product) => (
-          <CartItem product={product} />
+          <CartItem product={product} key={product.id} />
         ))}
         <Styles.CartTotal>Total: R$ {productsTotalPrice}</Styles.CartTotal>
       </Styles.CartContent>
